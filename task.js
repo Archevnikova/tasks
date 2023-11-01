@@ -1,26 +1,64 @@
+//1
+/*let i=prompt("как тебя зовут?");
+console.log("Привет," +i);*/
+
+//2
 /*
-company = {
-    post:"developer",
-    name:"Ivan"
-}
-alert(company.name);
+let i=prompt("введите ваш год рождения");
+i=Number(i);
+const currentYear="2023";
+console.log(currentYear-i);*/
 
-let students = ['Алексей', 'Иван', 'Александр'];
+//3
+/*let i=prompt("введите длину стороны квадрата");
+i=Number(i);
+const fourSides = 4;
+console.log(i * fourSides);*/
 
-alert(students[1]);*/
-
-/*Напишите функцию showMessage, которая будет содержать переменную message со значением "Привет, ". 
-Создайте переменную userName со значением "Вася" или любое другое имя 
-вначале кода за пределами функции и добавьте эту переменную к значению переменной message. Выведите результат в alert.*/
+//4
 /*
-let userName = "Вася"; 
-function showMessage(){
-    let message = "привет,"+ userName;
-    alert( message);
-}
-showMessage();
+let r=prompt("введите радиус окружности")
+r=Number(r);
+console.log(Math.PI*r**2);*/
 
-Напишите код, который создает кнопку, повешайте на нее событие onclick, которое при нажатии на кнопку выполняет функцию myFunction.*/
-myFunction(){
-    console.log("ты молодец");
+//5
+/*let s = prompt("введите расстояние");
+let t = prompt("введите время");
+s = Number(s);
+t = Number(t);
+console.log( s/t );*/
+
+//6
+/*
+let $ = prompt("dollar");
+$ = Number($);
+const exchange = 0.9;                        //дробные числа?
+console.log ($*Math.round(exchange));*/
+
+//7
+/*
+let gB = prompt("гигабайты");
+gB = Number(gB);                          
+const mB = 820;
+console.log(gB/mB);*/
+
+//8
+/*
+let i = prompt ("сколько денег есть?");
+i = Number (i);
+let oneChocolate = 50;
+console.log (i / oneChocolate);*/
+
+//9 Запросите у пользователя трехзначное число и выведите
+//его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).
+/*let i = prompt ("введите трехзначное число");
+function reverceNumber(i){
+    return parseInt(i.split("").reverse().join()*Math.sign());                  //?????????????
 }
+*/
+
+//10 Запросите у пользователя целое число и выведите в ответ,
+//четное число или нет. В задании используйте логические операторы. В задании не надо использовать if или switch.
+let n = prompt("введите число");
+n = Number(n);
+for (let i = 0; i>=0;i++ )    ???????????????
