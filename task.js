@@ -46,19 +46,25 @@ console.log(gB/mB);*/
 /*
 let i = prompt ("сколько денег есть?");
 i = Number (i);
-let oneChocolate = 50;
+let oneChocolate = 50; 
 console.log (i / oneChocolate);*/
 
 //9 Запросите у пользователя трехзначное число и выведите
 //его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).
-/*let i = prompt ("введите трехзначное число");
-function reverceNumber(i){
-    return parseInt(i.split("").reverse().join()*Math.sign());                  //?????????????
-}
-*/
+let i = prompt ("введите трехзначное число");
+i = Number(i);
+let  a  = (i %10)*100;
+let c = Math.floor(i/100);
+let b =Math.floor((i%100) / 10)*10;
+console.log(a+b+c);
+
 
 //10 Запросите у пользователя целое число и выведите в ответ,
 //четное число или нет. В задании используйте логические операторы. В задании не надо использовать if или switch.
-let n = prompt("введите число");
-n = Number(n);
-for (let i = 0; i>=0;i++ )    ???????????????
+function task10(){
+    let n = prompt("введите число");
+    n = Number(n);
+    if (n % 2 == 0) {   
+        console.log("число четное");
+    }
+}
