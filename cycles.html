@@ -9,11 +9,15 @@
         </script>
     </head>
     <body>
-        
-        <button onclick="myFunction">Нажми</button>
-        <button onclick = "someFunction()">не нажимай</button>
-        <button onclick = "someThingFunction()">Как хочешь</button>
-        
+        <label>
+            Конвертер валют <input type = "number" id ="input$" placeholder ="USD" oninput = "money(this.value)"
+            onchange= "money(this.value)">
+        </label>
+        <select>
+            <option value ="EUR">Евро</option>
+            <option value ="UAN">Юань</option>
+        </select>
+        <p> вывод:<span id=""></span>
         <script src="task.js"></script>
     </body>
 </html>
