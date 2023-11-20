@@ -1,3 +1,29 @@
+// ■ Задания, в которых необходимо использовать WHILE.
+// 1. Вывести # столько раз, сколько указал пользователь.
+function grid(){
+    let i = prompt("введите решетки");
+    let count = 0;
+    while (count > 0 ){
+        count++;
+        i = i + count;
+    }
+    console.log(i);
+}
+// 2. Пользователь ввел число, а на экран вывелись все числа
+// от введенного до 0.
+
+function nambers(){
+    let n = Number(prompt("введите число"));
+    let count = 0;
+    while (count == 0){
+        count --;
+        n= n + count;
+    }
+    console.log(n);
+}
+
+
+
 //модуль  1.1.
 function one (){
     let i=prompt("как тебя зовут?");
@@ -460,13 +486,19 @@ while(n !=0 ){
 // Хотите увидеть следующий день?» и так до тех пор, пока
 // пользователь нажимает OK. 
 function week(){
+    let i = 0;
     while(true){
-        let day = prompt("День недели" ,"Хотите увидеть следующий день?");
+        let day = prompt("Хотите увидеть следующий день?");
+        if (day == "ok"){
+            break;
+        }
         let week = ["mon","tues","wedn","thurs","fri","satur","sun"];
-        while(day= true){
-        week++                        //for in?
-            console.log(`${week}`);
-        }  
+            console.log(week[i]);
+            i++;
+            if (i == 7){
+                i = 0;
+            }
+
     }    
  } 
 
@@ -489,16 +521,27 @@ function table (){
 // что указал пользователь, уменьшаете диапазон. Начальный
 // диапазон от 0 до 100, поделили пополам и получили 50.
 // Если пользователь указал, что его число > 50, то изменили
-// диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+//диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+function riddle(){
   let n = Number( prompt("загадай число от 0 до 100"));
-  let centerRange = (n >0 || n < 100 )/2;
-    for (let a = 0; a <=100; a++){
-        let result = (a + 100)/2;
+  let centerRange = 0;
+  let left = 0;
+  let right = 100;
+  console.log(left,right, centerRange);
+    while (n != centerRange ){
+        centerRange = Math.round((left + right)/2);
+        if (n < centerRange){
+            right = centerRange;
+        }else if (n > centerRange){
+            left = centerRange;
         }
-        console.log (result);
+        console.log(left,right, centerRange);
+    }
+        console.log (centerRange);
+}  
     // 63>50 
     // от 50 до 100
-    // (500+100)/2 = 75 цикл
+    // (50+10)/2 = 75 цикл
     // 63 < 75
     // от 50 до 75
     // (50+75)/2 = 62
