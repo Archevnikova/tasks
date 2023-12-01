@@ -55,8 +55,8 @@ console.log(setPerimeter(rectangle));
 function setWidth( rectangle, i ){
     rectangle.rightButton[0] += i;
 }
-setWidth(rectangle, 10);
-console.log(printWidth (rectangle) );
+setWidth(rectangle, 1);
+console.log(printWidth (rectangle) );            //Ппочему выводим printWidth??
 
 // 7. Функция изменения высоты прямоугольника. Она принимает объект-прямоугольник и на сколько единиц изменить
 // высоту.
@@ -70,20 +70,22 @@ console.log(printHeight(rectangle));
 // Она принимает объект-прямоугольник и два значения –
 // для изменения ширины и высоты.
 
-function changeWidthHeight( rectangle, w, h){
-    rectangle.rightButton[0] += w;
-    rectangle.lefTop[1] += h;
-    return changeWidthHeight(rectangle, 20, 20);
+function changeWidthHeight( rectangle, i, n){
+    rectangle.rightButton[0] += i;
+    rectangle.lefTop[1] += n;
+                   
 }
-
-
-
-
-
+console.log(printWidth(rectangle), printHeight(rectangle));
 
 // 9. Функция смещения прямоугольника по оси X. Она принимает объект-прямоугольник и на сколько единиц его
 // сдвинуть.
 
+function offsetRectangle( rectangle,x){
+    rectangle.lefTop[0]+= x;
+    rectangle.rightButton[0] += x;
+    
+}
+console.log(printWidth(rectangle, 3));                     //Почему выводит 41?
 // 10. Функция смещения прямоугольника по оси Y. Она принимает объект-прямоугольник и на сколько единиц его
 // сдвинуть.
 
