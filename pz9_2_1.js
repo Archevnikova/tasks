@@ -80,12 +80,12 @@ console.log(printWidth(rectangle), printHeight(rectangle));
 // 9. Функция смещения прямоугольника по оси X. Она принимает объект-прямоугольник и на сколько единиц его
 // сдвинуть.
 
-function offsetRectangle( rectangle,x){
-    rectangle.lefTop[0]+= x;
-    rectangle.rightButton[0] += x;
+function offsetRectangle( rectangle,i){
+    
+    rectangle.rightButton[0] += i;
     
 }
-console.log(printWidth(rectangle, 3));                     //Почему выводит 41?
+console.log(setWidth(rectangle, 3));                     //Почему выводит 41?
 // 10. Функция смещения прямоугольника по оси Y. Она принимает объект-прямоугольник и на сколько единиц его
 // сдвинуть.
 
@@ -94,3 +94,12 @@ console.log(printWidth(rectangle, 3));                     //Почему выв
 
 // 12. Функция для проверки, находится ли точка внутри прямоугольника. Она принимает объект-прямоугольник и
 // координаты точки.
+
+function inside(rectangle , x, y ){
+    if ((rectangle.lefTop[0] > x) && (rectangle.rightButton[0] > x) &&(rectangle.lefTop[1]> y)&& (rectangle.rightButton[1]< y )){
+        console.log("находится");
+    }else {
+        console.log("не находится");
+    }
+
+}
